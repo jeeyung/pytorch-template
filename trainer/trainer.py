@@ -72,7 +72,7 @@ class Trainer(BaseTrainer):
                 self.logger.info('Train Epoch: {} [{}/{} ({:.0f}%)] Loss: {:.6f}'.format(
                     epoch,
                     batch_idx * self.data_loader.batch_size,
-                    len(self.data_loader) * self.data_loader.batch_size,
+                    self.data_loader.n_sample,
                     100.0 * batch_idx / len(self.data_loader),
                     loss.item()))
 
